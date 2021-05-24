@@ -1,0 +1,133 @@
+/*======== IMPORTAR FONTES ==========*/
+@import url('https://fonts.googleapis.com/css2?family=Yantramanav:wght@300;400&display=swap');
+/*======= IMPORTAR ARQUIVOS SCSS =======*/
+@import './colors';
+@import './functions';
+
+
+
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background: #1A1A1A; 
+    font-family: 'Yantramanav', sans-serif;
+}
+
+.container{
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin: 0 10px;
+}
+
+
+
+/* ===== PG1 ===== */
+
+.header__logo img{
+    width: 60px;
+    height: auto;
+    padding-left:16px;
+    margin-top: 16px;
+}
+
+
+.banner{
+
+    margin: 0 20px;
+
+    &__conteudo{
+        text-align:center;
+    }
+
+    &__conteudo h1{
+        font-size:40.5px;
+        color: #FFFFFF;
+        font-weight:400;
+        letter-spacing: 0.85px;
+        text-transform:capitalize;
+        line-height: 60px;
+    }
+
+    &__conteudo p{
+        padding-top: 30px;
+        color: #B5B5B5;
+        font-size:14px;
+        font-weight: 300;
+        letter-spacing: 0px;
+        line-height:26px;
+    }
+
+    &__buttons{
+        display: flex;
+        flex-direction: column;
+        padding-top: 30px;
+        align-items: center;
+        padding-bottom: 18vh;
+
+        &-btn{
+            @include btn_interesse();
+        }
+        &-btn:last-child{
+            @include btn_comprar();
+        }
+    }
+}
+
+
+/* ======= HEADER/BANNER DESKTOP ========*/
+
+@media (min-width: 768px){
+
+    .header{
+
+        &__logo img{
+            margin-top: 27px;
+            padding-left: 43px;
+            width: 116px;
+            height: 95px;
+            margin-bottom: 150px;
+        }
+        
+    }
+
+    .banner{
+
+        margin: 0 150px;
+
+        &__conteudo h1{
+            font-size: 60px;;
+        }
+
+        &__conteudo p{
+            font-size: 20px;
+            margin: 0 auto;
+            width: 450px;
+            margin-top: 20px;
+        }
+
+        &__buttons{
+            display: flex;
+            flex-direction: ROW;
+            justify-content: space-between;
+            margin: 0 auto;
+            padding-top: 110px;
+            width:370px;
+        }
+        
+    }
+
+}
+
+/* === AJUSTE BANNER P/ DESK > 1440  ==== */
+
+@media (min-width: 1440px){
+    
+    .banner{
+        margin: 0 calc((100% - 800px) /2);
+    }
+}

@@ -1,0 +1,18 @@
+@mixin btn_interesse{
+    border: 1px solid #FFFFFF;
+    border-radius: 5px;
+    font-size:16px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    width: 169px;
+    height: 56px;
+    margin-bottom: 25px;
+    font-weight: bold;
+    background: black;
+}
+
+@mixin btn_comprar {
+    @include btn_interesse();
+    border: #F89D24;
+    background: #F89D24;
+}

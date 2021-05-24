@@ -1,0 +1,146 @@
+/*======== IMPORTAR FONTES ==========*/
+@import url("https://fonts.googleapis.com/css2?family=Yantramanav:wght@300;400&display=swap");
+/*======= IMPORTAR ARQUIVOS SCSS =======*/
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: #1A1A1A;
+  font-family: 'Yantramanav', sans-serif;
+}
+
+.container {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 10px;
+}
+
+/* ===== PG1 ===== */
+.header__logo img {
+  width: 60px;
+  height: auto;
+  padding-left: 16px;
+  margin-top: 16px;
+}
+
+.banner {
+  margin: 0 20px;
+}
+
+.banner__conteudo {
+  text-align: center;
+}
+
+.banner__conteudo h1 {
+  font-size: 40.5px;
+  color: #FFFFFF;
+  font-weight: 400;
+  letter-spacing: 0.85px;
+  text-transform: capitalize;
+  line-height: 60px;
+}
+
+.banner__conteudo p {
+  padding-top: 30px;
+  color: #B5B5B5;
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: 0px;
+  line-height: 26px;
+}
+
+.banner__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-top: 30px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 18vh;
+}
+
+.banner__buttons-btn {
+  border: 1px solid #FFFFFF;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  width: 169px;
+  height: 56px;
+  margin-bottom: 25px;
+  font-weight: bold;
+  background: black;
+}
+
+.banner__buttons-btn:last-child {
+  border: 1px solid #FFFFFF;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  width: 169px;
+  height: 56px;
+  margin-bottom: 25px;
+  font-weight: bold;
+  background: black;
+  border: #F89D24;
+  background: #F89D24;
+}
+
+/* ======= HEADER/BANNER DESKTOP ========*/
+@media (min-width: 768px) {
+  .header__logo img {
+    margin-top: 27px;
+    padding-left: 43px;
+    width: 116px;
+    height: 95px;
+    margin-bottom: 150px;
+  }
+  .banner {
+    margin: 0 150px;
+  }
+  .banner__conteudo h1 {
+    font-size: 60px;
+  }
+  .banner__conteudo p {
+    font-size: 20px;
+    margin: 0 auto;
+    width: 450px;
+    margin-top: 20px;
+  }
+  .banner__buttons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: ROW;
+            flex-direction: ROW;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin: 0 auto;
+    padding-top: 110px;
+    width: 370px;
+  }
+}
+
+/* === AJUSTE BANNER P/ DESK > 1440  ==== */
+@media (min-width: 1440px) {
+  .banner {
+    margin: 0 calc((100% - 800px) /2);
+  }
+}
+/*# sourceMappingURL=style.css.map */
