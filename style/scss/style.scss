@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Yantramanav:wght@300;400&display=swap');
 /*======= IMPORTAR ARQUIVOS SCSS =======*/
 @import './colors';
+@import './colors2';
 @import './functions';
 
 
@@ -132,9 +133,9 @@ body{
     }
 }
 
-/* ============= FIM PG1 ==============*/
+/* ================== FIM PG1 =========================*/
 
-/* ============= PG2 ==================*/
+/* ==================== PG2 ==========================*/
 
 #pg2{
     background:#2c2c2c4f;
@@ -145,7 +146,7 @@ body{
     &__square{
         width: 111px;
         height:105px;
-        border: 1px solid #FEC024;
+        border: 1px solid $laranja;
         position:absolute;
         background: none;
         border-top: none;
@@ -154,7 +155,7 @@ body{
 
     &__txt{
         margin: 0 20px;
-        margin-top: 30px;
+
     }
 
     &__txt h1{
@@ -195,7 +196,7 @@ body{
         margin-top: 20px;
 
         &--conteudo h5{
-            color:$amarelo;
+            color:$laranja;
             padding: 0 24px;
             text-transform: uppercase;
             font-weight: bold;
@@ -228,7 +229,156 @@ body{
     }
     &__btn:last-child{
         @include btn_comprar();
-        margin-top:30px;
+        margin-top:20px;
     }
 
+    &__buttons--mobile{
+        display:flex;
+        flex-direction:column;
+    }
+    &__buttons--desktop{
+        display:none;
+    }
+}
+
+/* =============== PG2 DESKTOP =========== */
+@media (min-width:768PX){
+
+    .intro{
+        margin: 0 10px;
+        display: flex;
+
+        &__square{
+            width: 205px;
+            height: 206px;
+            margin-right: 900px;
+        }
+
+        &__txt h1{
+            font-size:64px;
+            padding-left: 65px;
+            padding-top: 120px;
+            letter-spacing: 1.34px;
+            line-height: 90px;
+        }
+
+        &__txt p{
+            width:350px;
+            font-size: 18px;
+            line-height:28px;
+            padding-left: 65px;
+        }
+
+        &__buttons--mobile{
+            display:none;
+        }
+
+        &__buttons--desktop{
+            display:block;
+            margin-left: 50px;
+            padding-top: 50px;
+        }
+
+        &__btn:last-child{
+            margin-left:20px;
+        }
+
+        &__preco {
+            color: #B5B5B5;
+            font-size:16px;
+            font-weight: bold;
+    
+            padding-left: 195px;
+            position: absolute;
+            padding-top:30px;
+        }
+
+        &__listbox{
+            flex-direction: row;
+            flex-wrap: wrap;
+            margin-left: 40px;;
+            margin-top: 40px;
+            padding-bottom: 75px;
+        }
+
+        &__box{
+            width: 253px;
+            height: 271px;
+            margin-right: 50px;
+            margin-bottom: 30px;
+        }
+    }
+
+
+}
+
+/* === AJUSTE PG2 P/ DESK > 1440  ==== */
+
+@media (min-width: 1440px){
+    
+    .intro{
+        margin: 40px calc((100% - 1200px) /2);
+    }
+}
+
+
+
+/* ========================= FIM PG 2 ============================*/
+
+/*========================== INICIO PG 3=========================*/
+
+
+.bg_pg3{
+    margin-top: 70px;;
+    width: 100%;
+    height:297px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.67), rgba(0, 0, 0, 0.67)), url("../img/bg.svg");
+}
+
+
+
+.brilhar{
+
+    &__txt{
+        margin: 0 40px;
+        padding-top: 45px;;
+    }
+
+    &__txt h3{
+        color: rgb(255, 255, 255);
+        font-size: 40.5px;
+        text-transform: capitalize;
+        font-weight:normal;
+    }
+}
+
+.box__pg3{
+    width: 100%;
+    height: 250px;
+    background-color: $laranja;
+}
+
+.box__conteudo{
+    align-items:center;
+    text-align: center; 
+    padding: 45px 0;
+
+    & h2{
+        font-size:48px;
+        font-weight: 500;
+        color: #fff;
+        margin-bottom: 24px;
+    }
+
+    &--btn{
+        width: 203px;
+        height: 56px;
+        border-radius: 5px;
+        background: $fudeu;
+        border: none;
+        color: $laranja;
+        font-size:14px;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
 }
