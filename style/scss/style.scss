@@ -2,7 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Yantramanav:wght@300;400&display=swap');
 /*======= IMPORTAR ARQUIVOS SCSS =======*/
 @import './colors';
-@import './colors2';
 @import './functions';
 
 
@@ -328,53 +327,52 @@ body{
 /*========================== INICIO PG 3=========================*/
 
 
-.bg_pg3{
-    margin-top: 70px;;
-    width: 100%;
-    height:297px;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.67), rgba(0, 0, 0, 0.67)), url("../img/bg.svg");
-}
+.MakeCourse{
+   
+    &__box1{
+        margin-top: 70px;;
+        width: 100%;
+        height:297px;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../img/bg.svg");
 
+        &__conteudo{
+            margin: 0 40px;;
+            text-align:center;
+            padding-top: 45px;
+        }
+        &__conteudo h3{
+            color: rgb(255, 255, 255);
+            font-size: 40.5px;
+            text-transform: capitalize;
+            font-weight:normal;
+        }
 
-
-.brilhar{
-
-    &__txt{
-        margin: 0 40px;
-        padding-top: 45px;;
     }
 
-    &__txt h3{
-        color: rgb(255, 255, 255);
-        font-size: 40.5px;
-        text-transform: capitalize;
-        font-weight:normal;
-    }
-}
+    &__box2{
+        width: 100%;
+        height: 250px;
+        background-color: $laranja;
 
-.box__pg3{
-    width: 100%;
-    height: 250px;
-    background-color: $laranja;
-}
-
-.box__conteudo{
-    align-items:center;
-    text-align: center; 
-    padding: 45px 0;
-
-    & h2{
-        font-size:48px;
-        font-weight: 500;
-        color: #fff;
-        margin-bottom: 24px;
+        &__conteudo{
+            align-items:center;
+            text-align: center; 
+            padding: 45px 0;
+            
+            & h2{
+                font-size:48px;
+                font-weight: 500;
+                color: #fff;
+                margin-bottom: 24px;
+            }
+        }
     }
 
-    &--btn{
+    &__btn{
         width: 203px;
         height: 56px;
         border-radius: 5px;
-        background: $fudeu;
+        background: #fff;
         border: none;
         color: $laranja;
         font-size:14px;
@@ -382,3 +380,4 @@ body{
         text-transform: uppercase;
     }
 }
+
