@@ -22,3 +22,26 @@ function exibir(txt_hide, tit, arrow) {
 }
 
 
+var elemento = document.querySelectorAll("#lista li");
+for (var i = 0; i < elemento.length; i++) {
+    elemento[i].addEventListener("click", function (e) {
+        var mudar = document.getElementById('change_p');
+        var pos = this.innerText;
+        if(pos == 'Competência 1'){
+            mudar.innerHTML = '<span>Esta seção visa explicar as competências que os alunos possuirão uma vez que concluírem o curso.</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Bibendum est ultricies integer quis. Iaculis urna id volutpat lacus laoreet. Mauris.'
+
+        }
+        if(pos == 'Competência 2'){
+            mudar.innerHTML = '<img style="width: 200px; margin-left: 90px; margin-top: -43px;" src="img/chris.jpg">'
+
+        }
+        if(pos == 'Competência 3'){
+            mudar.innerHTML = 'COMPETÊNCIA 3<br><br><span>Esta seção visa explicar as competências que os alunos possuirão uma vez que concluírem o curso</span><br><br><br><br>';
+
+        }
+        if(pos == 'Competência 4'){
+            mudar.innerHTML = 'COMPETÊNCIA 4<br><br><span>Esta seção visa explicar as competências que os alunos possuirão uma vez que concluírem o curso</span><br><br><br><br>';
+
+        }
+    })
+}

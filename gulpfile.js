@@ -37,7 +37,7 @@ function webpImage() {
 function jsmin(){
   return src('/js/*.js') // change to your source directory
     .pipe(terser())
-    .pipe(dest('/script')); // change to your final/public directory
+    .pipe(dest('/js/min')); // change to your final/public directory
 }
 
 //watchtask

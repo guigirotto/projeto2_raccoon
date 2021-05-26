@@ -18,9 +18,6 @@ body{
 }
 
 .container{
-    align-items: center;
-    text-align: center;
-    justify-content: center;
     @include margem();
 }
 
@@ -237,15 +234,13 @@ body{
 }
 
 /* =============== PG2 DESKTOP =========== */
-@media (min-width:768px){
+@media (min-width:1100px){
 
     .intro{
         display: flex;
 
         &__square{
-            width: 205px;
-            height: 206px;
-            margin-right: 900px;
+            @include square_desktop();
         }
 
         &__txt h1{
@@ -315,6 +310,12 @@ body{
     }
 }
 
+
+@media (min-width:768) and (max-width:1100){
+    .intro__listbox{
+        flex-direction: row;
+    }
+}
 
 
 /* ========================= FIM PG 2 ============================*/
@@ -452,7 +453,7 @@ body{
     }
 
     &__title{
-        margin-left: -15px;
+        margin-left: 23px;
         padding-top: 40px;
         width:300px;
         
@@ -511,6 +512,7 @@ body{
                     line-height:30px;
                     text-align: left;
                     font-weight: 300;
+                    
                 }
             }
         }
@@ -533,10 +535,150 @@ body{
     }
 }
 
+#pg4__desktop{
+    display: none;
+}
 
-.hidden {
-    opacity: 0;
-    margin-top: -330px;
-    z-index: -5;
-    transition-timing-function: linear, step-end, step-end;
-  }
+@media (min-width:768px){
+    #pg4{
+        display: none;
+    }
+    #pg4__desktop{
+        display: block;
+    }
+
+    .skillsD{
+        width:100%;
+        background-image: url('../../img/bgp4D.png');
+        background-size: cover;
+
+        &__content{
+            display: flex;
+            flex-direction: row;
+            justify-content:center;
+            padding: 127px 0;
+
+
+            &--list{
+                & ul{
+                    padding-top: 36px;
+                    width: 378px;
+                    background-color: #686868;
+    
+                    & li{
+                        margin-left: 60px;
+                        list-style: none;
+                        color: #fff;
+                        font-size: 32px;
+                        font-weight:200;
+                        line-height:80px;
+                        &:hover{
+                            font-weight: bold;
+                            border-bottom: 1px solid$laranja;
+                        }
+    
+    
+                    }
+                }
+            }  
+
+            &--txt{
+                    width: 600px;
+                    background-color: #262626;
+
+                    & p{
+                        margin: 0 115px;
+                        margin-top:90px;
+                        font-size: 18px;
+                        color: #fff;
+                        font-weight:300;
+                        text-align: left;
+                        
+                        & span{
+                            font-weight: bold;
+                        }
+                    }
+                          
+            }
+        }
+
+        &__buttons{
+
+            display:flex;
+            justify-content:space-between;
+            padding-top: 25px;
+            margin: 0 140px;
+
+        }
+        
+        &__btn{
+            background: none;
+            border: none;
+            font-size: 14px;
+            font-weight:bold;
+            color: #fff;
+
+            &:last-child{color: $laranja;}
+        }
+    }
+
+
+}
+
+/* =============AJUSTANDO DIV P/ N QUEBRAR TEXTO =====*/
+
+
+@media (max-width: 1000px){
+
+    .skillsD__content{
+        
+        &--txt{
+
+            & p{
+                margin: 0 70px;
+                margin-top:72px;
+            } 
+        }
+
+    }
+
+    .skillsD__buttons{
+
+        padding-top: 60px;
+    }
+}
+
+
+.teachers{
+
+    margin-bottom: 50px;
+    &__square{
+       @include square();
+    }
+    
+    &__txt{
+        margin: 0 20px;
+    }
+    
+    &__txt h1{
+        font-size: 48px;
+        color: #fff;
+        letter-spacing:1.01px;
+        font-weight: 500;
+        width: 30px;
+        line-height:70px;
+        padding-top: 40px;
+    }
+
+    &__list{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        &__box{
+            margin: 0 auto;
+            width: 315px;
+            border: 1px solid #6E6E6E;
+        }
+        
+    }
+}
