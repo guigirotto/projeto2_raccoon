@@ -674,11 +674,110 @@ body{
         display: flex;
         flex-direction: column;
         justify-content: center;
+        padding-top: 24px;
         &__box{
             margin: 0 auto;
             width: 315px;
             border: 1px solid #6E6E6E;
+            border-radius: 5px;
+            margin-bottom: 20px;
+
+            & img{
+                padding:24px;
+            }
+
+        &--txt{
+            & h5{
+                font-weight: bold;
+                color: $laranja;
+                margin-left: 24px;
+                font-size:14px;
+                letter-spacing:2px;
+                width: 180px;
+                text-transform: uppercase;
+            }
+            & p{
+                padding: 24px;
+                color: #B5B5B5;
+                font-size:16px;
+                font-weight:bold;
+            }
+        }
         }
         
+    }
+
+    &__buttons{
+        display:flex;
+        justify-content:center;
+        flex-direction:column;
+        align-items:center;
+        padding-top: 30px;
+    }
+
+    &__btn{
+        @include btn_interesse();
+
+        &:last-child{
+            @include btn_comprar();
+        }
+    }
+    
+}
+
+
+
+/* ============ PG4 DESKTOP ============ */
+@media (min-width: 768px){
+    .teachers{
+            margin:0 100px;
+
+
+            
+        &__txt h1{
+            font-size: 64px;
+            padding-top: 130px;
+            letter-spacing: 1.34px;
+            margin-left: 65px;
+            line-height: 80px;
+        }
+        &__square{
+                @include square_desktop();
+        }
+        &__list{
+            margin-top: 70px;
+            flex-direction:row;
+            flex-wrap: wrap;
+
+            &__box{
+                margin: 0 auto;
+                width: 363px;
+                border: 1px solid #6E6E6E;
+                border-radius: 5px;
+                margin-bottom: 20px;
+
+    
+                & img{
+                    width:315px;
+                }
+            }
+
+         }
+    
+
+         &__buttons{
+            justify-content: space-between;
+           flex-direction: row;
+            align-items: center;
+           width: 380px;
+           margin: 0 auto;
+        }
+    }   
+
+}
+
+@media (min-width: 1344px){
+    .teachers{
+        margin: 0 calc((100% - 1150px) / 2)
     }
 }
