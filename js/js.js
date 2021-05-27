@@ -41,3 +41,28 @@ for (var i = 0; i < elemento.length; i++) {
         }
     })
 }
+
+
+var slides = document.querySelectorAll('.carousel__slide');
+var btns = document.querySelectorAll('.carousel__btn');
+let currentSlide = 1;
+
+var manualNav = function(manual){
+    slides.forEach((slide) => {
+    slide.classList.remove('active');
+    
+        btns.forEach((btn) => {
+        btn.classList.remove('carousel__active');
+            });
+    });
+    
+        slides[manual].classList.add('active');
+        btns[manual].classList.add('carousel__active');
+}
+    
+btns.forEach((btn, i) => {
+    btn.addEventListener("click", () => {
+    manualNav(i);
+    currentSlide = i;
+    });
+});
