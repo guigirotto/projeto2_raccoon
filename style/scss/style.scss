@@ -791,7 +791,7 @@ body{
 
     &__slider{
         position: relative;
-        height: 680px;
+        height: 780px;
 
     }
 
@@ -814,7 +814,7 @@ body{
 
     &__btn{
         background: transparent;
-          color: #fff;
+          color: rgb(104, 104, 104);
         height: 12px;
         margin: 10px;
         cursor: pointer;
@@ -824,7 +824,7 @@ body{
 
     &__active{
             
-        color: rgb(255, 5, 222);
+        color: rgb(255, 255, 255);
     
     }
 
@@ -862,6 +862,8 @@ body{
     
 }
 
+/*==========AJUSTES DE TAMANHO CAROUSEL=========*/
+@media (min-width: 340px){.carousel__slider{height:680px;}}
 @media (min-width: 405px){.carousel__slider{height:630px;}}
 @media (min-width: 440px){.carousel__slider{height:580px;}}
 @media (min-width: 550px){.carousel__slider{height:520px;}}
@@ -870,6 +872,7 @@ body{
 @media (min-width: 768px){
     
     .carousel{
+        margin-top: 30px;;
         background-image: url('../../img/bgCarouselDesk.png');
     }
     .carousel__slider{
@@ -922,7 +925,7 @@ body{
 
 
 
-
+/*==========AJUSTES DE MARGEM CAROUSEL=========*/
 @media (min-width:1180px){
     .carousel__slider{
         margin-left: 100px;
@@ -942,4 +945,171 @@ body{
         margin-left: calc((100% - 1050px) / 2);
         margin-right: calc((100% - 1050px) / 2);
     }
+}
+
+
+
+/* ================= PG 6 ==================*/
+
+
+.learn{
+    &__square{
+        @include square();
+    }
+
+    &__buttons{
+        display:flex;
+        justify-content:center;
+        flex-direction:column;
+        align-items:center;
+        padding-top: 30px;
+    }
+
+    &__btn{
+        @include btn_interesse();
+
+        &:last-child{
+            @include btn_comprar();
+        }
+    }
+
+    &__txt{
+
+        margin-left: 20px;
+        margin-right: 20px;
+        & h2{
+            font-size: 48px;
+            width: 255px;
+            letter-spacing: 1.34px;
+            line-height: 60px;
+            color: #fff;
+            font-weight: 500;
+            padding-top: 43px;;
+        }
+
+        &--desc{
+            padding-top:20px;
+            color: #B5B5B5;
+            line-height:25px;
+            font-size:13.5px;
+            
+            & span{
+                font-weight: bold;
+            }
+        }
+        &--met{
+            padding-top: 20px;
+            display: flex;
+            flex-direction:column;
+
+            & h5{
+                text-transform: uppercase;
+                font-weight: bold;
+                padding-left: 24px;
+                font-size:15px;
+                color: $laranja;
+                margin-top:-17px;
+                letter-spacing: 2px;
+            }
+            & p{
+                color: #B5B5B5;
+                font-weight: bold;
+                line-height:25px;
+                font-size: 16px;
+                margin-left: 24px;
+                margin-right:26px;
+                margin-top: 10px;
+                margin-bottom: 25px;
+            }
+        }
+    }
+}
+
+.circle {
+    width: 12px;
+    height: 12px;
+    border: 1px solid #F89D24;
+    border-radius:50%;
+    margin-top: 2px;
+}
+
+@media (min-width: 768px){
+
+    .learn{
+
+        margin:0 100px;
+
+        &__square{
+            @include square_desktop();
+        }
+
+        &__conteudo{
+        }
+        &__txt{
+            & h2{
+                font-size: 64px;
+                width: 400px;
+                letter-spacing: 1.34px;
+                line-height: 80px;
+                color: #fff;
+                font-weight: 500;
+                padding-top: 125px;
+                margin-left: 68px;
+            }
+
+            & p{
+                font-size: 18px;
+            }
+            &--desc{
+                margin-left: 68px;
+                width:500px;
+            }
+            &--met{
+                padding-left: 70px;
+                padding-top:30px;
+            }
+    }
+
+}
+
+}
+
+
+
+@media (min-width: 1100px){
+
+    .learn{
+
+        &__conteudo{
+            display: flex;
+        }
+        &__txt{
+
+            & p{
+                font-size: 18px;
+            }
+            &--desc{
+                margin-left: 68px;
+                width:700px;
+            }
+            &--met{
+                padding-left: 150px;
+                margin-top: -90px;
+            }
+    }
+
+        &__buttons{
+            width: 380px;
+            justify-content: space-between;
+            flex-direction: row;
+            margin-top: -70px;
+            margin-left: 90px;
+        }
+
+
+        padding-bottom: 120px;
+
+
+}
+
 }
