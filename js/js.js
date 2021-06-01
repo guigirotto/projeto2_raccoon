@@ -66,3 +66,119 @@ btns.forEach((btn, i) => {
     currentSlide = i;
     });
 });
+
+
+// ====================== FORMULÁRIO ==========================
+var modal = document.getElementsByClassName("formulario")[0];
+var span = document.getElementsByClassName("formulario__close")[0];
+function open_modal(){
+  modal.style.display = "block";
+}
+
+
+function close_modal(){
+  modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+// ======== verificar checkbox e fazer requisição =================================
+
+function req(){
+    let checkbox = document.getElementById('termo');
+    let nome = document.getElementById("name").value
+    let email = document.getElementById("email").value
+    let telefone = document.getElementById("tel").value
+    let prof = document.getElementById("prof").value
+
+    if(nome == ""){
+        alert("Nome não informado");
+        return;
+    }
+    if( email=="" || email.indexOf('@')==-1 || email.indexOf('.')==-1 ){
+        alert( "Por favor, informe um E-MAIL válido!" );
+        return;
+    }
+    
+    if(telefone == ""){
+        alert("Telefone não informado")
+        return;
+    }
+    if(prof == ""){
+        alert("Profissão não informada")
+        return;
+    }
+
+    
+    if(checkbox.checked) {
+        event.preventDefault()
+        let url = "http://localhost:7777/interessados"
+        body = {
+            "id": Math.floor(Math.random() * 10000000),
+            "name": nome,
+            "telefone": telefone,
+            "profissão": prof,
+            "email": email
+        }
+
+        fazPost(url, body)
+
+        // ======================== Fecha o Modal =========================
+        alert('dados cadastrados com sucesso' );
+        var modal = document.getElementsByClassName("formulario")[0];
+        modal.style.display = "none";
+    } else {
+        alert('É necessário concordar com os termos');
+    }
+}
+
+//=======================================================================================
+
+//========================== MASCARA TELEFONE =============================
+
+document.querySelectorAll('input').forEach($input => {
+    const field = $input.dataset.js
+  
+    $input.addEventListener('input', e => {
+      e.target.value = masks[field](e.target.value)
+    }, false)
+  })
+
+
+
+  const masks = {
+    phone (value) {
+      return value
+        .replace(/\D+/g, '')
+        .replace(/(\d{2})(\d)/, '($1) $2')
+        .replace(/(\d{4})(\d)/, '$1-$2')
+        .replace(/(\d{4})-(\d)(\d{4})/, '$1$2-$3')
+        .replace(/(-\d{4})\d+?$/, '$1')
+    }
+  }  
+
+  //=====================================================================
+
+
+  function fazPost(url, body) {
+    console.log("Body=", body)
+    let request = new XMLHttpRequest()
+    request.open("POST", url, true)
+    request.setRequestHeader("Content-type", "application/json")
+    request.send(JSON.stringify(body))
+
+    request.onload = function() {
+        console.log(this.responseText)
+    }
+
+    return request.responseText
+}
+
+
+function cadastraUsuario() {
+    
+}

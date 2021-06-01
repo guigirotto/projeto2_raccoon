@@ -19,7 +19,7 @@
                     <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h1>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
                     <div class="banner__buttons">
-                        <button class="banner__buttons-btn">Tenho Interesse</button>
+                        <button class="banner__buttons-btn" onclick="open_modal()" >Tenho Interesse</button>
                         <button class="banner__buttons-btn">Comprar Agora</button>
                     </div>
                 </div>
@@ -38,7 +38,7 @@
                         
                       <div class="intro__buttons--desktop">
                         <h6 class="intro__preco">R$ 5.000,00</h6>
-                        <button class="intro__btn">Tenho Interesse</button>
+                        <button class="intro__btn btn__form" onclick="open_modal()" >Tenho Interesse</button>
                         <button class="intro__btn">Comprar Agora</button> 
                     </div>
                 
@@ -74,7 +74,7 @@
                         </div>
                     </div>
                     <div class="intro__buttons--mobile">
-                         <button class="intro__btn">Tenho Interesse</button>
+                         <button class="intro__btn" onclick="open_modal()">Tenho Interesse</button>
                         <button class="intro__btn">Comprar Agora</button>
                     </div>
 
@@ -162,7 +162,7 @@
                 </div>
 
                 <div class="skills__buttons">
-                    <button class="skills__btn">Tenho Interesse</button>
+                    <button class="skills__btn" onclick="open_modal()">Tenho Interesse</button>
                    <button class="skills__btn">Comprar Agora</button>
                </div>
 
@@ -184,7 +184,7 @@
                     <div class="skillsD__content--txt">
                         <p id="change_p"><span>Esta seção visa explicar as competências que os alunos possuirão uma vez que concluírem o curso.</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Bibendum est ultricies integer quis. Iaculis urna id volutpat lacus laoreet. Mauris.</p>
                         <div class="skillsD__buttons">
-                            <button type="button" class="skillsD__btn" >TENHO INTERESSE</button>
+                            <button type="button" class="skillsD__btn" onclick="open_modal()">TENHO INTERESSE</button>
                             <button type="button" class="skillsD__btn" >COMPRE AGORA</button>
                         </div>
                     </div>
@@ -254,7 +254,7 @@
                     </div>
                 </div>
                 <div class="teachers__buttons">
-                    <button class="teachers__btn">Tenho Interesse</button>
+                    <button class="teachers__btn" onclick="open_modal()">Tenho Interesse</button>
                     <button class="teachers__btn">Comprar Agora</button>
                 </div>
             </div>            
@@ -325,15 +325,66 @@
                 </div>
 
                 <div class="learn__buttons">
-                    <button type="button" class="learn__btn" >TENHO INTERESSE</button>
+                    <button type="button" class="learn__btn" onclick="open_modal()">TENHO INTERESSE</button>
                     <button type="button" class="learn__btn" >COMPRE AGORA</button>
                 </div>
             </div>
         </div>
     </section>
+    
+    
     <section id="pg7">
+        <div class="apto">
+            <div class="container">
 
+                <div class="apto__conteudo">
+                    <div class="apto__square"></div>
+                    <div class="apto__title">
+                        <h2>Eu estou Apto?</h2>
+                    </div>
+                    <div class="apto__cont">
+                        <p><span>Esta seção visa explicar quem é a persona que o curso quer atingir.</span><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Bibendum est ultricies integer quis. Iaculis urna id volutpat lacus laoreet. Mauris vitae.</p>
+                        
+                    </div>
+                    <div class="apto__buttons">
+                        <button type="button" class="learn__btn" onclick="open_modal()">TENHO INTERESSE</button>
+                        <button type="button" class="learn__btn" >COMPRE AGORA</button>
+                    </div>
+                </div>
+            </div>
+                
+        </div>
     </section>
+    
+
+<!-- The Modal -->
+
+<div class="formulario">
+
+  <!-- Modal content -->    
+  
+  <div class="formulario__body">  
+        <span class="formulario__close" onclick="close_modal()">X</span>
+        <h1>Lorem</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
+
+        <div class="formulario__conteudo">
+
+            <input type="text" id="name" name="nome" placeholder="Nome">
+            <input type="text" id="tel" name="tel" placeholder="Telefone" data-js="phone">
+            <input type="text" id="email" name="email" placeholder="E-mail">
+            <input type="text" id="prof" name="prof" placeholder="Profissão">        
+            <div class="formulario__conteudo--termo">
+            <input type="checkbox" id="termo">
+            <p>Li e aceito os <a href="#">termos de uso</a>.</p>
+        </div>      
+        </div>   
+        
+           
+        <input type="submit" onclick="req()" value="Declarar Interesse">
+     </div>
+
+</div>
 
     
 
