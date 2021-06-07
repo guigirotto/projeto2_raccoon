@@ -1155,11 +1155,12 @@ body{
     width:100%;
     background-image: url('../../img/img_otm/bgpg7.webp');
     background-size: cover;
+    background-color: #0C0C0C;
 
 
     &__square{
         @include square();
-    }
+        margin-left: 20px;    }
     &__title{
         & h2{
             font-size: 48px;
@@ -1198,7 +1199,6 @@ body{
 @media (min-width: 768px){
     .apto{
         background-image: url('../../img/img_otm/bgpg7D.webp');
-
         background-size: cover;
         background-color: #2C2C2C;
         &__conteudo{
@@ -1249,7 +1249,7 @@ body{
 
 
 
-/* Modal*/
+/*  ========= MODAL =========*/
 .formulario {
     display: none; 
     position: fixed; 
@@ -1445,6 +1445,7 @@ body{
 footer{
     text-align: center;
     background-color: #0C0C0C;
+    padding-top: 40px;
     & p{
         font-size: 16px;
         color: #B5B5B5;
