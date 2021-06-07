@@ -68,7 +68,7 @@ btns.forEach((btn, i) => {
 });
 
 
-// =========================== FORMULÁRIO =============================
+// =========================== FORMULÁRIO ===============================
 var modal = document.getElementsByClassName("formulario")[0];
 var span = document.getElementsByClassName("formulario__close")[0];
 function open_modal(){
@@ -100,7 +100,7 @@ function req(){
         return;
     }
     if( email=="" || email.indexOf('@')==-1 || email.indexOf('.')==-1 ){
-        alert( "Por favor, informe um E-MAIL válido!" );
+        alert( "Por favor, informe um E-MAIL válido!!" );
         return;
     }
     
@@ -127,7 +127,7 @@ function req(){
 
         fazPost(url, body)
 
-        // ======================== Fecha o Modal =========================
+        // ======================== Fecha o Modal ===================================
         alert('dados cadastrados com sucesso' );
         var modal = document.getElementsByClassName("formulario")[0];
         modal.style.display = "none";

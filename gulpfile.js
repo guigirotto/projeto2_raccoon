@@ -35,17 +35,17 @@ function webpImage() {
 
 // minify js
 function jsmin(){
-  return src('/js/*.js') // change to your source directory
+  return src('js/*.js') // change to your source directory
     .pipe(terser())
-    .pipe(dest('/js/min')); // change to your final/public directory
+    .pipe(dest('js/min')); // change to your final/public directory
 }
 
 //watchtask
 function watchTask(){
   watch('style/scss/*.scss', compilescss); // change to your source directory
-  watch('/js/*.js', jsmin); // change to your source directory
+  watch('js/*.js', jsmin); // change to your source directory
   watch('src/images/*', optimizeimg); // change to your source directory
-  watch('dist/images/*.{jpg,png}', webpImage); // change to your source directory
+  watch('/images/*.{jpg,png}', webpImage); // change to your source directory
 }
 
 
