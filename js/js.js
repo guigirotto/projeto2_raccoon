@@ -68,7 +68,7 @@ btns.forEach((btn, i) => {
 });
 
 
-// ====================== FORMULÁRIO ==========================
+// =========================== FORMULÁRIO =============================
 var modal = document.getElementsByClassName("formulario")[0];
 var span = document.getElementsByClassName("formulario__close")[0];
 function open_modal(){
@@ -86,7 +86,7 @@ window.onclick = function(event) {
   }
 }
 
-// ======== verificar checkbox e fazer requisição =================================
+// ============================verificar checkbox e fazer requisição =================================
 
 function req(){
     let checkbox = document.getElementById('termo');

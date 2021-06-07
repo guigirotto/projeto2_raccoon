@@ -27,9 +27,9 @@ function optimizeimg() {
 
 //optimize and move images
 function webpImage() {
-  return src('dist/images/*.{jpg,png}') // change to your source directory
+  return src('img/*.{jpg,png}') // change to your source directory
     .pipe(imagewebp())
-    .pipe(dest('dist/images')) // change to your final/public directory
+    .pipe(dest('img/img_otm')) // change to your final/public directory
 };
 
 
